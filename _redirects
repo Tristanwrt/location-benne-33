@@ -1,0 +1,3 @@
+# HTML-only redirects to homepage
+/*.html / 301
+/14-home / 301

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Location Benne Bordeaux - Conseils & Guides 2026</title>
+    <meta name="description"
+        content="Retrouvez tous nos conseils d'experts sur la location de benne à Bordeaux : prix, choix, réglementation, conseils pratiques et guides complets.">
+    <link rel="canonical" href="http://locationbennebordeaux-benne33.net/blog/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .blog-categories {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .category-tag {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            border: 2px solid transparent;
+        }
+
+        .category-tag:hover,
+        .category-tag.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-dark);
+        }
+
+        .featured-article {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-article::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .featured-article h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .featured-article p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .featured-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .blog-article-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-medium);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--accent-color) 0%, #128f66 100%);
+            padding: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .article-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: var(--bg-white);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .article-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .article-body {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .article-excerpt {
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--text-medium);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            gap: 0.5rem;
+            transition: gap var(--transition-fast);
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero {
+                padding: 2rem 0;
+            }
+
+            .featured-article {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">🚛 Location <span>Benne Bordeaux</span></a>
+            <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+            <nav class="nav" role="navigation">
+                <a href="/">Accueil</a>
+                <a href="/#services">Services</a>
+                <a href="/#tarifs">Tarifs</a>
+                <a href="/#zones">Zones</a>
+                <a href="/blog/">Blog</a>
+                <a href="/qui-sommes-nous.html">Qui sommes-nous</a>
+                <a href="/#devis" class="cta-button">Devis Gratuit</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>📚 Blog Location Benne Bordeaux</h1>
+            <p>Découvrez nos guides experts, conseils pratiques et actualités sur la location de bennes à Bordeaux et en
+                Gironde</p>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="blog-categories">
+            <span class="category-tag active">📖 Tous les articles</span>
+            <span class="category-tag">💰 Tarifs & Prix</span>
+            <span class="category-tag">📋 Guides Pratiques</span>
+            <span class="category-tag">⚖️ Réglementation</span>
+        </div>
+
+        <!-- Featured Article -->
+        <div class="featured-article">
+            <div class="featured-badge">⭐ Article Vedette</div>
+            <h2>Prix Location Benne Bordeaux 2026 : Guide Complet & Tarifs</h2>
+            <p>Découvrez tous les prix de location de benne à Bordeaux en 2026. Guide complet des tarifs selon taille,
+                durée et type de déchets. Facteurs de prix, comparatifs et astuces pour optimiser votre budget.</p>
+            <a href="/blog/prix-location-benne-bordeaux.html" class="btn btn-secondary" style="margin-top: 1rem;">Lire
+                le guide complet →</a>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-3">
+            <!-- Article 1 -->
+            <article class="blog-article-card">
+                <div class="article-header" style="background: linear-gradient(135deg, #ff6b35 0%, #e85a28 100%);">
+                    <div class="article-icon">📏</div>
+                    <h3>Comment Choisir sa Benne ?</h3>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>📅 Janvier 2026</span>
+                        <span>⏱️ 6 min</span>
+                    </div>
+                    <p class="article-excerpt">Guide pratique pour sélectionner la taille de benne adaptée à votre
+                        projet. Estimez correctement vos besoins et évitez les erreurs coûteuses.</p>
+                    <div class="article-tags">
+                        <span class="tag">Guide</span>
+                        <span class="tag">Conseils</span>
+                        <span class="tag">Taille</span>
+                    </div>
+                    <a href="/blog/comment-choisir-sa-benne.html" class="read-more">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-article-card">
+                <div class="article-header" style="background: linear-gradient(135deg, #004e89 0%, #003a66 100%);">
+                    <div class="article-icon">⚖️</div>
+                    <h3>Réglementation Voie Publique</h3>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>📅 Janvier 2026</span>
+                        <span>⏱️ 7 min</span>
+                    </div>
+                    <p class="article-excerpt">Tout savoir sur les autorisations et démarches pour installer une benne
+                        sur la voie publique à Bordeaux. Guide 2026 complet.</p>
+                    <div class="article-tags">
+                        <span class="tag">Réglementation</span>
+                        <span class="tag">Démarches</span>
+                        <span class="tag">Legal</span>
+                    </div>
+                    <a href="/blog/reglementation-benne-voie-publique-bordeaux.html" class="read-more">Lire l'article
+                        →</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-article-card">
+                <div class="article-header" style="background: linear-gradient(135deg, #1a936f 0%, #128f66 100%);">
+                    <div class="article-icon">⏰</div>
+                    <h3>Durée Location Benne</h3>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>📅 Janvier 2026</span>
+                        <span>⏱️ 5 min</span>
+                    </div>
+                    <p class="article-excerpt">Combien de temps garder votre benne ? Guide sur la durée idéale selon
+                        votre projet, tarifs des prolongations et optimisation du planning.</p>
+                    <div class="article-tags">
+                        <span class="tag">Durée</span>
+                        <span class="tag">Planning</span>
+                        <span class="tag">Tarifs</span>
+                    </div>
+                    <a href="/blog/duree-location-benne.html" class="read-more">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="blog-article-card">
+                <div class="article-header" style="background: linear-gradient(135deg, #6a4c93 0%, #553a73 100%);">
+                    <div class="article-icon">🗂️</div>
+                    <h3>Types de Bennes</h3>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>📅 Janvier 2026</span>
+                        <span>⏱️ 7 min</span>
+                    </div>
+                    <p class="article-excerpt">Découvrez tous les types de bennes : gravats, encombrants, déchets verts,
+                        bois, mixte. Caractéristiques et usages détaillés.</p>
+                    <div class="article-tags">
+                        <span class="tag">Types</span>
+                        <span class="tag">Choix</span>
+                        <span class="tag">Guide</span>
+                    </div>
+                    <a href="/blog/differents-types-bennes.html" class="read-more">Lire l'article →</a>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="blog-article-card">
+                <div class="article-header" style="background: linear-gradient(135deg, #2a9d8f 0%, #21867a 100%);">
+                    <div class="article-icon">♻️</div>
+                    <h3>Évacuation Déchets</h3>
+                </div>
+                <div class="article-body">
+                    <div class="article-meta">
+                        <span>📅 Janvier 2026</span>
+                        <span>⏱️ 6 min</span>
+                    </div>
+                    <p class="article-excerpt">Solutions professionnelles d'évacuation des déchets à Bordeaux : location
+                        de bennes, déchetteries, tri, recyclage et réglementation.</p>
+                    <div class="article-tags">
+                        <span class="tag">Déchets</span>
+                        <span class="tag">Recyclage</span>
+                        <span class="tag">Bordeaux</span>
+                    </div>
+                    <a href="/blog/evacuation-dechets-bordeaux.html" class="read-more">Lire l'article →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-alt">
+        <div class="container-narrow text-center">
+            <h2>Besoin d'une Location de Benne à Bordeaux ?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">Nos experts sont à votre disposition pour vous
+                conseiller et établir un devis gratuit personnalisé</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/#devis" class="btn btn-primary">Obtenir un Devis Gratuit</a>
+                <a href="tel:+33XXXXXXXXX" class="btn btn-outline">📞 Appelez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>À Propos</h4>
+                <p>Service professionnel de location de bennes à Bordeaux et en Gironde.</p>
+            </div>
+            <div>
+                <h4>Liens Utiles</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/qui-sommes-nous.html">Qui sommes-nous</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/#devis">Devis Gratuit</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Nos Zones</h4>
+                <ul class="footer-links">
+                    <li><a href="/villes/location-benne-cenon.html">Cenon</a></li>
+                    <li><a href="/villes/location-benne-merignac.html">Mérignac</a></li>
+                    <li><a href="/villes/location-benne-pessac.html">Pessac</a></li>
+                    <li><a href="/villes/location-benne-talence.html">Talence</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Informations Légales</h4>
+                <ul class="footer-links">
+                    <li><a href="/mentions-legales.html">Mentions Légales</a></li>
+                    <li><a href="/politique-confidentialite.html">Confidentialité</a></li>
+                    <li><a href="/cgv.html">CGV</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Location Benne Bordeaux - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

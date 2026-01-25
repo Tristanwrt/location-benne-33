@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://locationbennebordeaux-benne33.net/sitemap.xml
